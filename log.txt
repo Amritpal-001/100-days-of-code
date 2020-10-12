@@ -1,0 +1,51 @@
+# 100 Days Of Code - Log
+
+
+### Day 1: Sept 24 , 2020
+
+**Today's Goal**: Python - Web image scrapping - for data science project
+
+**Today's Progress** :  Worked with two types of web scrapping. First more Data science project oriented(But requires manual copy paste of code/files) , second compeletly from python terminal
+
+**Thoughts:** Web scrapping if done rightly has great potential for large database collection.
+
+**Link to work:** [Web Scrapper in python](https://github.com/Amritpal-001/100-days-of-code/tree/master/Code/Day1%20-%20Web%20scrapping)
+
+
+
+### Day 2: Sept 25 , 2020
+
+**Today's Goal**: Python - Web text scrapping(Potential uses - Product prices from amazon/flipkart ,Extract names of images)
+
+**Today's Progress** Learnt how to use 're' module ,  and Extracted the Image names from text before saving images, Extracting product names/prices from html file of any random website)
+
+**Thoughts:** re is a easy way to do a lot of things. Worth investing time to learn re.
+
+**Link to work:** [Web text Scrappeing in python](http://www.example.com)
+
+
+
+### Day 3: Sept 26 , 2020
+
+**Today's Goal**: Slicing text and strings - Re(Regex) in python
+
+**Today's Progress**  - learnt re(regular expression) use in python. ++++++ Solved Euler problems(34,35)
+
+**Thoughts:** Slowly steadily win the race. Try making a Hybrid plan/habit - with small small of everything. 
+
+**Link to work:** [Text splicing](http://www.example.com)
+
+
+### Day 4: Sept 27 , 2020
+
+**Today's Goal**: Twitter Bot(Basic)
+
+**Today's Progress**  - Twitter bot for replying to any custom hashtag on twitter.
+
+**Thoughts:** Such apps are really easy too build and mostly understanding 2-3 functions in original api of the social media. Should do more often, for more general things.
+
+
+
+
+
+
