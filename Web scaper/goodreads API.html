@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html class="desktop
+ picture es5array es5date es5function es5object strictmode es5string json es5syntax es5undefined es5 no-touchevents cssanimations flexbox flexwrap csstransforms localstorage" style=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>API</title>
+
+<meta content="The Goodreads API allows developers access to Goodreads data in order to help websites or applications that deal with books be more personalized, social,..." name="description">
+<meta content="telephone=no" name="format-detection">
+<link href="goodreads%20API_files/index.html" rel="canonical">
+
+
+
+  
+
+          <script src="goodreads%20API_files/rules-p-0dUe_kJAjvkoY.js" async=""></script><script async="" src="goodreads%20API_files/beacon.js"></script><script src="goodreads%20API_files/aquant.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="goodreads%20API_files/dc.js"></script><script async="" src="goodreads%20API_files/apstag.js"></script><script async="" type="text/javascript" src="goodreads%20API_files/gpt.js"></script><script id="twitter-wjs" src="goodreads%20API_files/widgets.js"></script><script type="text/javascript">
+        if (window.Mobvious === undefined) {
+          window.Mobvious = {};
+        }
+        window.Mobvious.device_type = 'desktop';
+        </script>
+
+
+  
+<script src="goodreads%20API_files/webfontloader-a4c3e3db861400cfb4c59e1e66203849.js"></script>
+<link rel="stylesheet" href="goodreads%20API_files/fonts-e256f84093cc13b27f5b82343398031a.css" media="all"><script>
+//<![CDATA[
+
+  WebFont.load({
+    classes: false,
+    custom: {
+      families: ["Lato:n4,n7,i4", "Merriweather:n4,n7,i4"],
+      urls: ["https://s.gr-assets.com/assets/gr/fonts-e256f84093cc13b27f5b82343398031a.css"]
+    }
+  });
+
+//]]>
+</script>
+
+  <link rel="stylesheet" media="all" href="goodreads%20API_files/goodreads-be792648f6864881c227eec0a506b926.css">
+
+  
+
+  <link rel="stylesheet" media="screen" href="goodreads%20API_files/common_images-670d97636259cafc355c94fc43e871d7.css">
+
+  <script src="goodreads%20API_files/libraries-5c5199f961869b33be99ba58c919f22d.js"></script>
+  <script src="goodreads%20API_files/application-b0cb51b8eb45cbc1362f19361b6643ae.js"></script><style>.cke{visibility:hidden;}</style>
+
+    <script>
+  //<![CDATA[
+    var gptAdSlots = gptAdSlots || [];
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+      var gads = document.createElement("script");
+      gads.async = true;
+      gads.type = "text/javascript";
+      var useSSL = "https:" == document.location.protocol;
+      gads.src = (useSSL ? "https:" : "http:") +
+      "//securepubads.g.doubleclick.net/tag/js/gpt.js";
+      var node = document.getElementsByTagName("script")[0];
+      node.parentNode.insertBefore(gads, node);
+    })();
+    // page settings
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    googletag.cmd.push(function() {
+      googletag.pubads().setTargeting("sid", "osid.d9824b323a04e9a7313c154dcf608b82");
+    googletag.pubads().setTargeting("grsession", "osid.d9824b323a04e9a7313c154dcf608b82");
+    googletag.pubads().setTargeting("surface", "desktop");
+    googletag.pubads().setTargeting("signedin", "false");
+    googletag.pubads().setTargeting("gr_author", "false");
+    googletag.pubads().setTargeting("author", []);
+      googletag.pubads().enableAsyncRendering();
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs(true);
+      googletag.pubads().disableInitialLoad();
+      googletag.enableServices();
+    });
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    ! function(a9, a, p, s, t, A, g) {
+      if (a[a9]) return;
+    
+      function q(c, r) {
+        a[a9]._Q.push([c, r])
+      }
+      a[a9] = {
+      init: function() {
+        q("i", arguments)
+      },
+      fetchBids: function() {
+        q("f", arguments)
+      },
+      setDisplayBids: function() {},
+        _Q: []
+      };
+      A = p.createElement(s);
+      A.async = !0;
+      A.src = t;
+      g = p.getElementsByTagName(s)[0];
+      g.parentNode.insertBefore(A, g)
+    }("apstag", window, document, "script", "//c.amazon-adsystem.com/aax2/apstag.js");
+    
+    apstag.init({
+      pubID: '3211', adServer: 'googletag', bidTimeout: 4e3
+    });
+  //]]>
+</script>
+
+
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="TxLP4v+d5KmF1wEpCQyFwjk/r23EJVkfPIunqKszdMVtfRO9v8c1R2KlfMwOgaQ7Y36yccyozDcNMJm4Y/jxHA==">
+
+  <meta name="request-id" content="G5PRD68APRNJ52F9DW1G">
+
+    <script src="goodreads%20API_files/external_dependencies-51654d5556.js" defer="defer"></script>
+<script src="goodreads%20API_files/site_header-f0ff1fe560.js" defer="defer"></script>
+<script src="goodreads%20API_files/custom_react_ujs-b1220d5e0a4820e90b905c302fc5cb52.js" defer="defer"></script>
+
+
+  
+
+  
+  
+  
+
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.goodreads.com/opensearch.xml" title="Goodreads">
+
+    <script>
+//<![CDATA[
+
+  var GoodreadsAnalytics = GoodreadsAnalytics || {};
+  var _gaq = _gaq || [];
+
+  GoodreadsAnalytics.push = function () {
+    _gaq.push.apply(_gaq, arguments);
+  }
+
+  GoodreadsAnalytics.push(['_setAccount', 'UA-968618-1']);
+  GoodreadsAnalytics.push(['_setCustomVar',
+    1,                        // Slot 1
+    'User Status',            // Custom variable name
+    'signed_out',  // Custom variable value: signed_out, signed_in,
+                              //   signed_in_facebook_connected, or
+                              //   goodreads_member_previously_signed_in
+    2                         // Visit-level scope, which means slot 1 will be
+                              //   free when the visit ends.
+  ]);
+  GoodreadsAnalytics.push(['_setCustomVar',
+    2,                        // Slot 2
+    'Device Type',            // Custom variable name
+    'desktop',         // Custom variable value: desktop, mobile, or
+                              //   tablet
+    2                         // Visit-level scope, which means slot 2 will be
+                              //   free when the visit ends.
+  ]);
+  GoodreadsAnalytics.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+
+//]]>
+</script>
+
+    <meta name="description" content="The Goodreads API allows developers access to Goodreads data in order to help websites or applications that deal with books be more personalized, social,...">
+
+  <meta content="summary" name="twitter:card">
+<meta content="@goodreads" name="twitter:site">
+<meta content="API" name="twitter:title">
+<meta content="The Goodreads API allows developers access to Goodreads data in order to help websites or applications that deal with books be more personalized, social,..." name="twitter:description">
+
+
+  <meta name="verify-v1" content="cEf8XOH0pulh1aYQeZ1gkXHsQ3dMPSyIGGYqmF53690=">
+  <meta name="google-site-verification" content="PfFjeZ9OK1RrUrKlmAPn_iZJ_vgHaZO1YQ-QlG2VsJs">
+  <meta name="apple-itunes-app" content="app-id=355833469">
+<link rel="preload" href="goodreads%20API_files/integrator_002.js" as="script"><script type="text/javascript" src="goodreads%20API_files/integrator_002.js"></script><link rel="preload" href="goodreads%20API_files/integrator.js" as="script"><script type="text/javascript" src="goodreads%20API_files/integrator.js"></script><script src="goodreads%20API_files/pubads_impl_2020012701.js" async=""></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+
+
+<body class="">
+
+<div class="content">
+    <script>
+  //<![CDATA[
+    var initializeGrfb = function() {
+      $grfb.initialize({
+        appId: "2415071772",
+        grSession: false,
+        serverFBUser: null,
+        suppressAutoLogin: false
+      });
+    };
+    if (typeof $grfb !== "undefined") {
+      initializeGrfb();
+    } else {
+      window.addEventListener("DOMContentLoaded", function() {
+        if (typeof $grfb !== "undefined") {
+          initializeGrfb();
+        }
+      });
+    }
+  //]]>
+</script>
+
+<div class="siteHeader">
+<div data-react-class="ReactComponents.HeaderStoreConnector" data-react-props="{&quot;myBooksUrl&quot;:&quot;/review/list&quot;,&quot;browseUrl&quot;:&quot;/book&quot;,&quot;recommendationsUrl&quot;:&quot;/recommendations&quot;,&quot;choiceAwardsUrl&quot;:&quot;/choiceawards&quot;,&quot;genresIndexUrl&quot;:&quot;/genres&quot;,&quot;giveawayUrl&quot;:&quot;/giveaway&quot;,&quot;homeUrl&quot;:&quot;/&quot;,&quot;listUrl&quot;:&quot;/list&quot;,&quot;logo&quot;:{&quot;clickthroughUrl&quot;:&quot;/&quot;,&quot;altText&quot;:&quot;Goodreads Home&quot;},&quot;blogUrl&quot;:&quot;/blog/index&quot;,&quot;editorsPicksUrl&quot;:&quot;/voice&quot;,&quot;newsUrl&quot;:&quot;/news&quot;,&quot;communityUrl&quot;:&quot;/group&quot;,&quot;groupsUrl&quot;:&quot;/group&quot;,&quot;quotesUrl&quot;:&quot;/quotes&quot;,&quot;featuredAskAuthorUrl&quot;:&quot;/ask_the_author&quot;,&quot;searchPath&quot;:&quot;/search&quot;,&quot;discussionsUrl&quot;:&quot;/topic&quot;,&quot;autocompleteUrl&quot;:&quot;/book/auto_complete&quot;,&quot;defaultLogoActionUrl&quot;:&quot;/&quot;,&quot;readingNotesUrl&quot;:&quot;/notes?ref=nd&quot;,&quot;topFullImage&quot;:{},&quot;newReleasesUrl&quot;:&quot;/book/popular_by_date/2020/2&quot;,&quot;signInUrl&quot;:&quot;/user/sign_in&quot;,&quot;signUpUrl&quot;:&quot;/user/sign_up&quot;,&quot;signInWithReturnUrl&quot;:true,&quot;deployServices&quot;:[],&quot;defaultLogoAltText&quot;:&quot;Goodreads Home&quot;,&quot;mobviousDeviceType&quot;:&quot;desktop&quot;}"><header data-reactid=".b4umo5zytc"><div class="siteHeader__topLine gr-box gr-box--withShadow" data-reactid=".b4umo5zytc.1"><div class="siteHeader__contents" data-reactid=".b4umo5zytc.1.0"><div class="siteHeader__topLevelItem siteHeader__topLevelItem--searchIcon" data-reactid=".b4umo5zytc.1.0.0"><button class="siteHeader__searchIcon gr-iconButton" aria-label="Toggle search" type="button" data-ux-click="true" data-reactid=".b4umo5zytc.1.0.0.0"></button></div><a href="https://www.goodreads.com/" class="siteHeader__logo" aria-label="Goodreads Home" title="Goodreads Home" data-reactid=".b4umo5zytc.1.0.1"></a><nav class="siteHeader__primaryNavInline" data-reactid=".b4umo5zytc.1.0.2"><ul role="menu" class="siteHeader__menuList" data-reactid=".b4umo5zytc.1.0.2.0"><li class="siteHeader__topLevelItem siteHeader__topLevelItem--home" data-reactid=".b4umo5zytc.1.0.2.0.0"><a href="https://www.goodreads.com/" class="siteHeader__topLevelLink" data-reactid=".b4umo5zytc.1.0.2.0.0.0">Home</a></li><li class="siteHeader__topLevelItem" data-reactid=".b4umo5zytc.1.0.2.0.1"><a href="https://www.goodreads.com/review/list" class="siteHeader__topLevelLink" data-reactid=".b4umo5zytc.1.0.2.0.1.0">My Books</a></li><li class="siteHeader__topLevelItem" data-reactid=".b4umo5zytc.1.0.2.0.2"><div class="primaryNavMenu primaryNavMenu--siteHeaderBrowseMenu ignore-react-onclickoutside" data-reactid=".b4umo5zytc.1.0.2.0.2.0"><a class="primaryNavMenu__trigger primaryNavMenu__trigger--siteHeaderBrowseMenu" href="https://www.goodreads.com/book" role="button" aria-haspopup="true" aria-expanded="false" data-ux-click="true" data-reactid=".b4umo5zytc.1.0.2.0.2.0.0"><span data-reactid=".b4umo5zytc.1.0.2.0.2.0.0.0">Browse ▾</span></a><div class="primaryNavMenu__menu gr-box gr-box--withShadowLarge" role="menu" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1"><div class="siteHeader__browseMenuDropdown" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0"><ul class="siteHeader__subNav" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0"><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.0"><a href="https://www.goodreads.com/recommendations" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.0.0">Recommendations</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.1"><a href="https://www.goodreads.com/choiceawards" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.1.0">Choice Awards</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.2"><a href="https://www.goodreads.com/genres" class="siteHeader__subNavLink siteHeader__subNavLink--genresIndex" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.2.0">Genres</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.3"><a href="https://www.goodreads.com/giveaway" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.3.0">Giveaways</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.4"><a href="https://www.goodreads.com/book/popular_by_date/2020/2" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.4.0">New Releases</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.5"><a href="https://www.goodreads.com/list" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.5.0">Lists</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.6"><a href="https://www.goodreads.com/book" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.6.0">Explore</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.7"><a href="https://www.goodreads.com/news" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.7.0">News &amp; Interviews</a></li><div class="siteHeader__sponsoredFillSpace" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.8"></div><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.9"><a href="https://www.goodreads.com/audible" class="siteHeader__sponsoredNavLink" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.9.0"><div data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.9.0.0"><div class="siteHeader__navDivider" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.9.0.0.0"></div><span data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.9.0.0.1">Listen with Audible</span></div></a></li><div class="siteHeader__sponsoredLabel" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.a"><span class="siteHeader__sponsoredIcon googleNativeAd__sponsoredBadgeIcon featuredGenres__sponsoredIcon" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.a.0"></span><span class="featuredGenres__sponsoredLabel siteHeader__sponsoredText" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.0.a.1">Sponsored</span></div></ul><div class="siteHeader__spotlight siteHeader__spotlight--withoutSubMenu" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1"><div class="genreListContainer" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0"><div class="siteHeader__heading siteHeader__title" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.0">Genres</div><ul class="genreList" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0"><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Art"><a href="https://www.goodreads.com/genres/art" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Art.0">Art</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Biography"><a href="https://www.goodreads.com/genres/biography" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Biography.0">Biography</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Business"><a href="https://www.goodreads.com/genres/business" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Business.0">Business</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Children's"><a href="https://www.goodreads.com/genres/children-s" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Children's.0">Children's</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Christian"><a href="https://www.goodreads.com/genres/christian" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Christian.0">Christian</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Classics"><a href="https://www.goodreads.com/genres/classics" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Classics.0">Classics</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Comics"><a href="https://www.goodreads.com/genres/comics" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Comics.0">Comics</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Cookbooks"><a href="https://www.goodreads.com/genres/cookbooks" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Cookbooks.0">Cookbooks</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Ebooks"><a href="https://www.goodreads.com/genres/ebooks" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Ebooks.0">Ebooks</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Fantasy"><a href="https://www.goodreads.com/genres/fantasy" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList0.0:$Fantasy.0">Fantasy</a></li></ul><ul class="genreList" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1"><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Fiction"><a href="https://www.goodreads.com/genres/fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Fiction.0">Fiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Graphic Novels"><a href="https://www.goodreads.com/genres/graphic-novels" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Graphic Novels.0">Graphic Novels</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Historical Fiction"><a href="https://www.goodreads.com/genres/historical-fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Historical Fiction.0">Historical Fiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$History"><a href="https://www.goodreads.com/genres/history" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$History.0">History</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Horror"><a href="https://www.goodreads.com/genres/horror" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Horror.0">Horror</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Memoir"><a href="https://www.goodreads.com/genres/memoir" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Memoir.0">Memoir</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Music"><a href="https://www.goodreads.com/genres/music" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Music.0">Music</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Mystery"><a href="https://www.goodreads.com/genres/mystery" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Mystery.0">Mystery</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Nonfiction"><a href="https://www.goodreads.com/genres/non-fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Nonfiction.0">Nonfiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Poetry"><a href="https://www.goodreads.com/genres/poetry" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList1.0:$Poetry.0">Poetry</a></li></ul><ul class="genreList" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2"><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Psychology"><a href="https://www.goodreads.com/genres/psychology" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Psychology.0">Psychology</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Romance"><a href="https://www.goodreads.com/genres/romance" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Romance.0">Romance</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Science"><a href="https://www.goodreads.com/genres/science" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Science.0">Science</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Science Fiction"><a href="https://www.goodreads.com/genres/science-fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Science Fiction.0">Science Fiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Self Help"><a href="https://www.goodreads.com/genres/self-help" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Self Help.0">Self Help</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Sports"><a href="https://www.goodreads.com/genres/sports" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Sports.0">Sports</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Thriller"><a href="https://www.goodreads.com/genres/thriller" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Thriller.0">Thriller</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Travel"><a href="https://www.goodreads.com/genres/travel" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Travel.0">Travel</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Young Adult"><a href="https://www.goodreads.com/genres/young-adult" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.0:$Young Adult.0">Young Adult</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.1"><a href="https://www.goodreads.com/genres" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.2.0.2.0.1.0.1.0.1:$genreList2.1.0">More Genres</a></li></ul></div></div></div></div></div></li><li class="siteHeader__topLevelItem siteHeader__topLevelItem--community" data-reactid=".b4umo5zytc.1.0.2.0.3"><div class="primaryNavMenu ignore-react-onclickoutside" data-reactid=".b4umo5zytc.1.0.2.0.3.0"><a class="primaryNavMenu__trigger" href="https://www.goodreads.com/group" role="button" aria-haspopup="true" aria-expanded="false" data-ux-click="true" data-reactid=".b4umo5zytc.1.0.2.0.3.0.0"><span data-reactid=".b4umo5zytc.1.0.2.0.3.0.0.0">Community ▾</span></a><div class="primaryNavMenu__menu gr-box gr-box--withShadowLarge" role="menu" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1"><ul class="siteHeader__subNav" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0"><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.0"><a href="https://www.goodreads.com/group" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.0.0">Groups</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.1"><a href="https://www.goodreads.com/topic" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.1.0">Discussions</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.2"><a href="https://www.goodreads.com/quotes" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.2.0">Quotes</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.3"><a href="https://www.goodreads.com/ask_the_author" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.2.0.3.0.1.0.3.0">Ask the Author</a></li></ul></div></div></li></ul></nav><div accept-charset="UTF-8" class="searchBox searchBox--navbar" data-reactid=".b4umo5zytc.1.0.3"><form autocomplete="off" action="/search" class="searchBox__form" role="search" aria-label="Search for books to add to your shelves" data-reactid=".b4umo5zytc.1.0.3.0"><input class="searchBox__input searchBox__input--navbar" autocomplete="off" name="q" type="text" placeholder="Search books" aria-label="Search books" aria-controls="searchResults" data-reactid=".b4umo5zytc.1.0.3.0.0"><input type="hidden" name="qid" value="" data-reactid=".b4umo5zytc.1.0.3.0.1"><button type="submit" class="searchBox__icon--magnifyingGlass gr-iconButton searchBox__icon searchBox__icon--navbar" aria-label="Search" data-reactid=".b4umo5zytc.1.0.3.0.2"></button></form></div><ul class="siteHeader__personal" data-reactid=".b4umo5zytc.1.0.4"><li class="siteHeader__topLevelItem siteHeader__topLevelItem--signedOut" data-reactid=".b4umo5zytc.1.0.4.0"><a href="https://www.goodreads.com/user/sign_in?returnurl=%2Fapi%2Findex" rel="nofollow" class="siteHeader__topLevelLink" data-reactid=".b4umo5zytc.1.0.4.0.0">Sign In</a></li><li class="siteHeader__topLevelItem siteHeader__topLevelItem--signedOut" data-reactid=".b4umo5zytc.1.0.4.1"><a href="https://www.goodreads.com/user/sign_up" rel="nofollow" class="siteHeader__topLevelLink" data-reactid=".b4umo5zytc.1.0.4.1.0">Join</a></li></ul><div class="siteHeader__topLevelItem siteHeader__topLevelItem--signUp" data-reactid=".b4umo5zytc.1.0.5"><a href="https://www.goodreads.com/user/sign_up" class="gr-button gr-button--dark" rel="nofollow" data-reactid=".b4umo5zytc.1.0.5.0">Sign up</a></div><div class="modal modal--overlay modal--drawer" tabindex="0" data-reactid=".b4umo5zytc.1.0.7"><div data-reactid=".b4umo5zytc.1.0.7.0"><div class="modal__close" data-reactid=".b4umo5zytc.1.0.7.0.0"><button type="button" class="gr-iconButton" data-reactid=".b4umo5zytc.1.0.7.0.0.0"><img alt="Dismiss" src="goodreads%20API_files/icon_close_white-dbf4152deeef5bd3915d5d12210bf05f.svg" data-reactid=".b4umo5zytc.1.0.7.0.0.0.0"></button></div><div class="modal__content" data-reactid=".b4umo5zytc.1.0.7.0.1"><div class="personalNavDrawer" data-reactid=".b4umo5zytc.1.0.7.0.1.0"><div class="personalNavDrawer__personalNavContainer" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0"><ul class="personalNav" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0"><li class="personalNav__listItem" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.0"><a class="headerPersonalNav" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.0.0"><span class="headerPersonalNav__icon
+                       headerPersonalNav__icon--notifications" aria-label="Notifications" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.0.0.0"></span></a></li><li class="personalNav__listItem" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.1"><a href="https://www.goodreads.com/topic" class="headerPersonalNav" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.1.0"><span class="headerPersonalNav__icon headerPersonalNav__icon--discussions" aria-label="My group discussions" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.1.0.0"></span></a></li><li class="personalNav__listItem" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.2"><a title="Messages" class="headerPersonalNav" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.2.0"><span class="headerPersonalNav__icon headerPersonalNav__icon--inbox" aria-label="Inbox" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.2.0.0"></span></a></li><li class="personalNav__listItem" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.3"><a title="Friends" class="headerPersonalNav" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.3.0"><span class="headerPersonalNav__icon headerPersonalNav__icon--friendRequests" aria-label="Friend Requests" data-reactid=".b4umo5zytc.1.0.7.0.1.0.0.0.3.0.0"></span></a></li></ul></div><div class="personalNavDrawer__profileAndLinksContainer" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1"><div class="personalNavDrawer__profileContainer gr-mediaFlexbox gr-mediaFlexbox--alignItemsCenter" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.0"><div class="gr-mediaFlexbox__media" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.0.0"><img class="circularIcon circularIcon--large circularIcon--border" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.0.0.0"></div><div class="gr-mediaFlexbox__desc" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.0.1"><a class="gr-hyperlink gr-hyperlink--bold" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.0.1.0"></a><div class="u-displayBlock" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.0.1.1"><a class="gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.0.1.1.0">View profile</a></div></div></div><div class="personalNavDrawer__profileMenuContainer" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1"><ul data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0"><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.0"><span data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.0.0"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.0.0.0">Profile</a></span></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.2"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.2.0">Friends</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.3"><span data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.3.0"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.3.0.0"><span data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.3.0.0.0">Groups</span></a></span></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.4"><a href="https://www.goodreads.com/topic" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.4.0">Discussions</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.5"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.5.0">Comments</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.6"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.6.0">Reading Challenge</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.7"><a href="https://www.goodreads.com/notes?ref=nd" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.7.0">Kindle Notes &amp; Highlights</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.8"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.8.0">Quotes</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.9"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.9.0">Favorite genres</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.a"><span data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.a.0"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.a.0.0"><span data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.a.0.0.0">Friends’ recommendations</span></a></span></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.b"><a class="siteHeader__subNavLink u-topGrayBorder" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.b.0">Account settings</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.c"><a class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.c.0">Help</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.d"><a class="siteHeader__subNavLink" data-method="POST" data-reactid=".b4umo5zytc.1.0.7.0.1.0.1.1.0.d.0">Sign out</a></li></ul></div></div></div></div></div></div></div></div><div class="headroom-wrapper" data-reactid=".b4umo5zytc.2"><div style="position: fixed; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translateY(0px); transition: all 0.2s ease-in-out 0s;" class="headroom headroom--pinned headroom--scrolled" data-reactid=".b4umo5zytc.2.0"><nav class="siteHeader__primaryNavSeparateLine gr-box gr-box--withShadow" data-reactid=".b4umo5zytc.2.0.0"><ul role="menu" class="siteHeader__menuList" data-reactid=".b4umo5zytc.2.0.0.0"><li class="siteHeader__topLevelItem siteHeader__topLevelItem--home" data-reactid=".b4umo5zytc.2.0.0.0.0"><a href="https://www.goodreads.com/" class="siteHeader__topLevelLink" data-reactid=".b4umo5zytc.2.0.0.0.0.0">Home</a></li><li class="siteHeader__topLevelItem" data-reactid=".b4umo5zytc.2.0.0.0.1"><a href="https://www.goodreads.com/review/list" class="siteHeader__topLevelLink" data-reactid=".b4umo5zytc.2.0.0.0.1.0">My Books</a></li><li class="siteHeader__topLevelItem" data-reactid=".b4umo5zytc.2.0.0.0.2"><div class="primaryNavMenu primaryNavMenu--siteHeaderBrowseMenu ignore-react-onclickoutside" data-reactid=".b4umo5zytc.2.0.0.0.2.0"><a class="primaryNavMenu__trigger primaryNavMenu__trigger--siteHeaderBrowseMenu" href="https://www.goodreads.com/book" role="button" aria-haspopup="true" aria-expanded="false" data-ux-click="true" data-reactid=".b4umo5zytc.2.0.0.0.2.0.0"><span data-reactid=".b4umo5zytc.2.0.0.0.2.0.0.0">Browse ▾</span></a><div class="primaryNavMenu__menu gr-box gr-box--withShadowLarge" role="menu" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1"><div class="siteHeader__browseMenuDropdown" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0"><ul class="siteHeader__subNav" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0"><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.0"><a href="https://www.goodreads.com/recommendations" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.0.0">Recommendations</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.1"><a href="https://www.goodreads.com/choiceawards" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.1.0">Choice Awards</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.2"><a href="https://www.goodreads.com/genres" class="siteHeader__subNavLink siteHeader__subNavLink--genresIndex" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.2.0">Genres</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.3"><a href="https://www.goodreads.com/giveaway" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.3.0">Giveaways</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.4"><a href="https://www.goodreads.com/book/popular_by_date/2020/2" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.4.0">New Releases</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.5"><a href="https://www.goodreads.com/list" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.5.0">Lists</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.6"><a href="https://www.goodreads.com/book" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.6.0">Explore</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.7"><a href="https://www.goodreads.com/news" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.7.0">News &amp; Interviews</a></li><div class="siteHeader__sponsoredFillSpace" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.8"></div><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.9"><a href="https://www.goodreads.com/audible" class="siteHeader__sponsoredNavLink" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.9.0"><div data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.9.0.0"><div class="siteHeader__navDivider" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.9.0.0.0"></div><span data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.9.0.0.1">Listen with Audible</span></div></a></li><div class="siteHeader__sponsoredLabel" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.a"><span class="siteHeader__sponsoredIcon googleNativeAd__sponsoredBadgeIcon featuredGenres__sponsoredIcon" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.a.0"></span><span class="featuredGenres__sponsoredLabel siteHeader__sponsoredText" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.0.a.1">Sponsored</span></div></ul><div class="siteHeader__spotlight siteHeader__spotlight--withoutSubMenu" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1"><div class="genreListContainer" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0"><div class="siteHeader__heading siteHeader__title" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.0">Genres</div><ul class="genreList" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0"><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Art"><a href="https://www.goodreads.com/genres/art" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Art.0">Art</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Biography"><a href="https://www.goodreads.com/genres/biography" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Biography.0">Biography</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Business"><a href="https://www.goodreads.com/genres/business" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Business.0">Business</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Children's"><a href="https://www.goodreads.com/genres/children-s" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Children's.0">Children's</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Christian"><a href="https://www.goodreads.com/genres/christian" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Christian.0">Christian</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Classics"><a href="https://www.goodreads.com/genres/classics" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Classics.0">Classics</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Comics"><a href="https://www.goodreads.com/genres/comics" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Comics.0">Comics</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Cookbooks"><a href="https://www.goodreads.com/genres/cookbooks" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Cookbooks.0">Cookbooks</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Ebooks"><a href="https://www.goodreads.com/genres/ebooks" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Ebooks.0">Ebooks</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Fantasy"><a href="https://www.goodreads.com/genres/fantasy" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList0.0:$Fantasy.0">Fantasy</a></li></ul><ul class="genreList" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1"><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Fiction"><a href="https://www.goodreads.com/genres/fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Fiction.0">Fiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Graphic Novels"><a href="https://www.goodreads.com/genres/graphic-novels" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Graphic Novels.0">Graphic Novels</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Historical Fiction"><a href="https://www.goodreads.com/genres/historical-fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Historical Fiction.0">Historical Fiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$History"><a href="https://www.goodreads.com/genres/history" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$History.0">History</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Horror"><a href="https://www.goodreads.com/genres/horror" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Horror.0">Horror</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Memoir"><a href="https://www.goodreads.com/genres/memoir" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Memoir.0">Memoir</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Music"><a href="https://www.goodreads.com/genres/music" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Music.0">Music</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Mystery"><a href="https://www.goodreads.com/genres/mystery" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Mystery.0">Mystery</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Nonfiction"><a href="https://www.goodreads.com/genres/non-fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Nonfiction.0">Nonfiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Poetry"><a href="https://www.goodreads.com/genres/poetry" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList1.0:$Poetry.0">Poetry</a></li></ul><ul class="genreList" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2"><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Psychology"><a href="https://www.goodreads.com/genres/psychology" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Psychology.0">Psychology</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Romance"><a href="https://www.goodreads.com/genres/romance" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Romance.0">Romance</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Science"><a href="https://www.goodreads.com/genres/science" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Science.0">Science</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Science Fiction"><a href="https://www.goodreads.com/genres/science-fiction" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Science Fiction.0">Science Fiction</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Self Help"><a href="https://www.goodreads.com/genres/self-help" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Self Help.0">Self Help</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Sports"><a href="https://www.goodreads.com/genres/sports" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Sports.0">Sports</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Thriller"><a href="https://www.goodreads.com/genres/thriller" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Thriller.0">Thriller</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Travel"><a href="https://www.goodreads.com/genres/travel" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Travel.0">Travel</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Young Adult"><a href="https://www.goodreads.com/genres/young-adult" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.0:$Young Adult.0">Young Adult</a></li><li role="menuitem" class="genreList__genre" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.1"><a href="https://www.goodreads.com/genres" class="genreList__genreLink gr-hyperlink gr-hyperlink--naked" data-reactid=".b4umo5zytc.2.0.0.0.2.0.1.0.1.0.1:$genreList2.1.0">More Genres</a></li></ul></div></div></div></div></div></li><li class="siteHeader__topLevelItem siteHeader__topLevelItem--community" data-reactid=".b4umo5zytc.2.0.0.0.3"><div class="primaryNavMenu ignore-react-onclickoutside" data-reactid=".b4umo5zytc.2.0.0.0.3.0"><a class="primaryNavMenu__trigger" href="https://www.goodreads.com/group" role="button" aria-haspopup="true" aria-expanded="false" data-ux-click="true" data-reactid=".b4umo5zytc.2.0.0.0.3.0.0"><span data-reactid=".b4umo5zytc.2.0.0.0.3.0.0.0">Community ▾</span></a><div class="primaryNavMenu__menu gr-box gr-box--withShadowLarge" role="menu" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1"><ul class="siteHeader__subNav" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0"><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.0"><a href="https://www.goodreads.com/group" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.0.0">Groups</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.1"><a href="https://www.goodreads.com/topic" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.1.0">Discussions</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.2"><a href="https://www.goodreads.com/quotes" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.2.0">Quotes</a></li><li role="menuitem" class="menuLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.3"><a href="https://www.goodreads.com/ask_the_author" class="siteHeader__subNavLink" data-reactid=".b4umo5zytc.2.0.0.0.3.0.1.0.3.0">Ask the Author</a></li></ul></div></div></li></ul></nav></div></div></header></div>
+</div>
+<div class="siteHeaderBottomSpacer"></div>
+
+  
+
+  <div class="mainContentContainer ">
+
+
+      
+
+    <div class="mainContent ">
+      
+      <div class="mainContentFloat ">
+
+        <div id="flashContainer">
+
+
+
+
+</div>
+
+        <style type="text/css" media="screen">
+  ul.apiIntro li {
+    padding: 5px 0px;
+  }
+</style>
+
+<div class="leftContainer">
+  <h1>API</h1>
+
+  <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Introduction</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+    <div class="mediumText">
+      The Goodreads API allows developers access to Goodreads data in 
+order to help websites or applications that deal with books be more 
+personalized, social, and engaging. The API can be used in many ways, 
+including:<br><br>
+
+      <ul class="mediumText apiIntro">
+        <li><b>Goodreads Connect</b>: Let members connect to their 
+Goodreads accounts, and you'll have full access to the books in their 
+shelves, their ratings, their reviews, and their friends – the social 
+reading graph. Use this to personalize an ecommerce store, power 
+recommendations, show a widget of a member's favorite books, build a 
+mobile or desktop client app, and more. Learn more about <a href="https://www.goodreads.com/api/connect">Goodreads Connect</a>.</li>
+      </ul>
+    </div>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>
+  <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Getting Started</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+    <div class="mediumText">
+      <ul class="mediumText">
+        <li>Most API methods will require you to register for a <a href="https://www.goodreads.com/api/keys">developer key</a>.</li>
+        <li>All developers using the API must adhere to the <a href="https://www.goodreads.com/api/terms">Goodreads API Terms &amp; Conditions</a>.</li>
+        <li>Read examples about <a href="https://www.goodreads.com/api/documentation">how to use the API.</a></li>
+        <li>For questions and discussion, visit the <a href="https://www.goodreads.com/group/show/8095">Developer Group</a> or <a href="https://www.goodreads.com/about/contact_us">contact us</a>.</li>
+      </ul>
+
+    </div>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>
+  <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">API Methods</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#auth.user">auth.user</a> &nbsp; — &nbsp;
+        Get id of user who authorized OAuth.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#author.books">author.books</a> &nbsp; — &nbsp;
+        Paginate an author's books.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#author.show">author.show</a> &nbsp; — &nbsp;
+        Get info about an author by id.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#author_following.create">author_following.create</a> &nbsp; — &nbsp;
+        Follow an author.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#author_following.destroy">author_following.destroy</a> &nbsp; — &nbsp;
+        Unfollow an author.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#author_following.show">author_following.show</a> &nbsp; — &nbsp;
+        Show author following information.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#book.isbn_to_id">book.isbn_to_id</a> &nbsp; — &nbsp;
+        Get Goodreads book IDs given ISBNs.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#book.id_to_work_id">book.id_to_work_id</a> &nbsp; — &nbsp;
+        Get Goodreads work IDs given Goodreads book IDs.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#book.review_counts">book.review_counts</a> &nbsp; — &nbsp;
+        Get review statistics given a list of ISBNs.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#book.show">book.show</a> &nbsp; — &nbsp;
+        Get the reviews for a book given a Goodreads book id.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#book.show_by_isbn">book.show_by_isbn</a> &nbsp; — &nbsp;
+        Get the reviews for a book given an ISBN.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#book.title">book.title</a> &nbsp; — &nbsp;
+        Get the reviews for a book given a title string.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#comment.create">comment.create</a> &nbsp; — &nbsp;
+        Create a comment.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#comment.list">comment.list</a> &nbsp; — &nbsp;
+        List comments on a subject.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#events.list">events.list</a> &nbsp; — &nbsp;
+        Events in your area.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#fanship.create">fanship.create</a> &nbsp; — &nbsp;
+        Become fan of an author. DEPRECATED.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#fanship.destroy">fanship.destroy</a> &nbsp; — &nbsp;
+        Stop being fan of an author. DEPRECATED.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#fanship.show">fanship.show</a> &nbsp; — &nbsp;
+        Show fanship information. DEPRECATED.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#followers.create">followers.create</a> &nbsp; — &nbsp;
+        Follow a user.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#followers.destroy">followers.destroy</a> &nbsp; — &nbsp;
+        Unfollow a user.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#friend.confirm_recommendation">friend.confirm_recommendation</a> &nbsp; — &nbsp;
+        Confirm or decline a friend recommendation.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#friend.confirm_request">friend.confirm_request</a> &nbsp; — &nbsp;
+        Confirm or decline a friend request.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#friend.requests">friend.requests</a> &nbsp; — &nbsp;
+        Get friend requests.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#friends.create">friends.create</a> &nbsp; — &nbsp;
+        Add a friend.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#group.join">group.join</a> &nbsp; — &nbsp;
+        Join a group.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#group.list">group.list</a> &nbsp; — &nbsp;
+        List groups for a given user.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#group.members">group.members</a> &nbsp; — &nbsp;
+        Return members of a particular group.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#group.search">group.search</a> &nbsp; — &nbsp;
+        Find a group.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#group.show">group.show</a> &nbsp; — &nbsp;
+        Get info about a group by id.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#list.book">list.book</a> &nbsp; — &nbsp;
+        Get the listopia lists for a given book.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#notifications">notifications</a> &nbsp; — &nbsp;
+        See the current user's notifications.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#owned_books.create">owned_books.create</a> &nbsp; — &nbsp;
+        Add to books owned.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#owned_books.list">owned_books.list</a> &nbsp; — &nbsp;
+        List books owned by a user.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#owned_books.show">owned_books.show</a> &nbsp; — &nbsp;
+        Show an owned book.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#owned_books.update">owned_books.update</a> &nbsp; — &nbsp;
+        Update an owned book.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#owned_books.destroy">owned_books.destroy</a> &nbsp; — &nbsp;
+        Delete an owned book.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#quotes.create">quotes.create</a> &nbsp; — &nbsp;
+        Add a quote.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#rating.create">rating.create</a> &nbsp; — &nbsp;
+        Like a resource.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#rating.destroy">rating.destroy</a> &nbsp; — &nbsp;
+        Unlike a resource.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#read_statuses.show">read_statuses.show</a> &nbsp; — &nbsp;
+        Get a user's read status.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#recommendations.show">recommendations.show</a> &nbsp; — &nbsp;
+        Get a recommendation from a user to another user.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#review.create">review.create</a> &nbsp; — &nbsp;
+        Add review.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#review.edit">review.edit</a> &nbsp; — &nbsp;
+        Edit a review.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#review.destroy">review.destroy</a> &nbsp; — &nbsp;
+        Delete a book review.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#reviews.list">reviews.list</a> &nbsp; — &nbsp;
+        Get the books on a members shelf.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#review.recent_reviews">review.recent_reviews</a> &nbsp; — &nbsp;
+        Recent reviews from all members..
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#review.show">review.show</a> &nbsp; — &nbsp;
+        Get a review.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#review.show_by_user_and_book">review.show_by_user_and_book</a> &nbsp; — &nbsp;
+        Get a user's review for a given book.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#search.authors">search.authors</a> &nbsp; — &nbsp;
+        Find an author by name.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#search.books">search.books</a> &nbsp; — &nbsp;
+        Find books by title, author, or ISBN.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#series.show">series.show</a> &nbsp; — &nbsp;
+        See a series.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#series.list">series.list</a> &nbsp; — &nbsp;
+        See all series by an author.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#series.work">series.work</a> &nbsp; — &nbsp;
+        See all series a work is in.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#shelves.add_to_shelf">shelves.add_to_shelf</a> &nbsp; — &nbsp;
+        Add a book to a shelf.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#shelves.add_books_to_shelves">shelves.add_books_to_shelves</a> &nbsp; — &nbsp;
+        Add books to many shelves.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#shelves.list">shelves.list</a> &nbsp; — &nbsp;
+        Get a user's shelves.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#topic.create">topic.create</a> &nbsp; — &nbsp;
+        Create a new topic via OAuth.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#topic.group_folder">topic.group_folder</a> &nbsp; — &nbsp;
+        Get list of topics in a group's folder.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#topic.show">topic.show</a> &nbsp; — &nbsp;
+        Get info about a topic by id.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#topic.unread_group">topic.unread_group</a> &nbsp; — &nbsp;
+        Get a list of topics with unread comments.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#updates.friends">updates.friends</a> &nbsp; — &nbsp;
+        Get your friend updates.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user_shelves.create">user_shelves.create</a> &nbsp; — &nbsp;
+        Add book shelf.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user_shelves.update">user_shelves.update</a> &nbsp; — &nbsp;
+        Edit book shelf.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user.show">user.show</a> &nbsp; — &nbsp;
+        Get info about a member by id or username.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user.compare">user.compare</a> &nbsp; — &nbsp;
+        Compare books with another member.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user.followers">user.followers</a> &nbsp; — &nbsp;
+        Get a user's followers.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user.following">user.following</a> &nbsp; — &nbsp;
+        Get people a user is following.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user.friends">user.friends</a> &nbsp; — &nbsp;
+        Get a user's friends.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user_status.create">user_status.create</a> &nbsp; — &nbsp;
+        Update user status.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user_status.destroy">user_status.destroy</a> &nbsp; — &nbsp;
+        Delete user status.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user_status.show">user_status.show</a> &nbsp; — &nbsp;
+        Get a user status.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#user_status.index">user_status.index</a> &nbsp; — &nbsp;
+        View user statuses.
+      </div>
+      <div style="padding: 3px 0px">
+        <a class="mediumText" href="https://www.goodreads.com/api/index#work.editions">work.editions</a> &nbsp; — &nbsp;
+        See all editions by work.
+      </div>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>
+  <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Links &amp; Widgets</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+    <div style="padding: 3px 0px">
+      <a class="mediumText" href="https://www.goodreads.com/api/index#book_links">book links</a> &nbsp; — &nbsp;
+      how to build proper links to Goodreads pages.
+    </div>
+    <div style="padding: 3px 0px">
+      <a class="mediumText" href="https://www.goodreads.com/api/index#atmb_widget">add to my books widget</a> &nbsp; — &nbsp;
+      allow users to add books to their Goodreads shelf from your site.
+    </div>
+  <div style="padding: 3px 0px">
+      <a class="mediumText" href="https://www.goodreads.com/api/index#reviews_widget">reviews widget</a> &nbsp; — &nbsp;
+      embed Goodreads book reviews on your site with an iframe.
+    </div>
+    <div style="padding: 3px 0px">
+      <a class="mediumText" href="https://www.goodreads.com/api/index#update_status">share a link</a> &nbsp; — &nbsp;
+      allow members to share a book related link from your site.
+    </div>
+    <div style="padding: 3px 0px">
+      <a class="mediumText" href="https://www.goodreads.com/user/edit?tab=widgets">members widgets</a> &nbsp; — &nbsp;
+      let members show off their favorite books, quotes, etc.
+    </div>
+    <div style="padding: 3px 0px">
+      <a class="mediumText" href="https://www.goodreads.com/api/index#logo_and_images">logo &amp; images</a> &nbsp; — &nbsp;
+      link to Goodreads with these image of our logo, "g" badges, and bookmark images.
+    </div>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>
+  <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">API Documentation</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+      <h2 id="auth.user" class="u-anchorTarget">Get id of user who authorized OAuth</h2>
+      Get an xml response with the Goodreads user_id for the user who authorized access using OAuth. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/api/auth_user</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="author.books" class="u-anchorTarget">Paginate an author's books</h2>
+      Get an xml response with a paginated list of an authors books.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/author/list.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads Author id (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="author.show" class="u-anchorTarget">Get info about an author by id</h2>
+      Get an xml response with info about an author.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/author/show.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads Author id.</li>
+          </ul>
+
+
+      <br>
+      <h2 id="author_following.create" class="u-anchorTarget">Follow an author</h2>
+      Make the signed-in user follow an author <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/author_followings?id=AUTHOR_ID&amp;format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+
+
+      <br>
+      <h2 id="author_following.destroy" class="u-anchorTarget">Unfollow an author</h2>
+      Unfollow an author <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/author_followings/AUTHOR_FOLLOWING_ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> DELETE
+
+      <br>
+
+
+      <br>
+      <h2 id="author_following.show" class="u-anchorTarget">Show author following information</h2>
+      Get an xml response <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a> describing the association between a user and an author. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/author_followings/AUTHOR_FOLLOWING_ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="book.isbn_to_id" class="u-anchorTarget">Get Goodreads book IDs given ISBNs</h2>
+      Get Goodreads book IDs given one or more ISBNs. Response contains IDs
+      without any markup.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/book/isbn_to_id</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">isbn: </span> ISBNs of books to look up.</li>
+          </ul>
+
+
+      <br>
+      <h2 id="book.id_to_work_id" class="u-anchorTarget">Get Goodreads work IDs given Goodreads book IDs</h2>
+      Get Goodreads work IDs given one or more Goodreads book IDs. Response contains work IDs
+      without any markup.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/book/id_to_work_id</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Book IDs of books to look up.</li>
+          </ul>
+
+
+      <br>
+      <h2 id="book.review_counts" class="u-anchorTarget">Get review statistics given a list of ISBNs</h2>
+      Get review statistics for books given a list of ISBNs. ISBNs can be
+        specified as an array (e.g. isbns[]=0441172717&amp;isbns[]=0141439602) or a
+        single, comma-separated string (e.g. isbns=0441172717,0141439602). You
+        can mix ISBN10s and ISBN13s, but you'll receive a 422 error if you don't
+        specify any, and you'll receive a 404 if none are found.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/book/review_counts.json</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">isbns: </span> Array of ISBNs or a comma separated string of ISBNs (1000 ISBNs per request max.)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">format: </span> json</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">callback: </span> function to wrap JSON response</li>
+          </ul>
+
+
+      <br>
+      <h2 id="book.show" class="u-anchorTarget">Get the reviews for a book given a Goodreads book id</h2>
+      Get an XML or JSON response that contains embed code for the iframe reviews
+      widget. The reviews widget shows an excerpt (first
+      300 characters) of the most
+      popular reviews of a book for a given internal Goodreads book_id. Reviews
+      of all known editions of the book are included.
+      <br><br>
+      XML responses also include shelves and book meta-data (title, author,
+      et cetera). The
+      Goodreads API gives you full access to Goodreads-owned meta-data, but
+      it does not
+      give you full access to book meta-data supplied by third parties such as
+      Ingram. Book cover images, descriptions, and other
+      data from third party sources might be excluded, because we do not have a
+      license to distribute these data via our API.
+      <br>
+      <br>
+      If you need book meta-data beyond what our API provides, consider signing
+      up for an Amazon developer key.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/book/show.FORMAT</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">format: </span> xml or json</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> A Goodreads internal book_id</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">text_only: </span> Only show reviews that have text (default false)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">rating: </span> Show only reviews with a particular rating (optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="book.show_by_isbn" class="u-anchorTarget">Get the reviews for a book given an ISBN</h2>
+      Get an xml or json response that contains embed code for the iframe reviews
+      widget that shows excerpts (first 300 characters)
+      of the most popular reviews of a book for a given ISBN. The reviews are
+      from all known editions of the book.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/book/isbn/ISBN?format=FORMAT</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">format: </span> xml or json</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">callback: </span> function to wrap JSON response if format=json</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required only for XML).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_id: </span> USER_ID (required only for JSON)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">isbn: </span> The ISBN of the book to lookup.</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">rating: </span> Show only reviews with a particular rating (optional)</li>
+          </ul>
+
+
+      <br>
+        <p>
+          <strong>Example code for using json with callback:</strong>
+          </p><pre>            &lt;script type="text/javascript"&gt;
+            function myCallback(result) {
+              alert('nb of reviews for book: ' + result.reviews.length);
+            }
+            var scriptTag = document.createElement('script');
+            scriptTag.src = "https://www.goodreads.com/book/isbn/0441172717?callback=myCallback&amp;format=json&amp;user_id=USER_ID";
+            document.getElementsByTagName('head')[0].appendChild(scriptTag);
+            &lt;/script&gt;
+          </pre>
+        <p></p>
+      <h2 id="book.title" class="u-anchorTarget">Get the reviews for a book given a title string</h2>
+      Get an xml response that contains embed code for the iframe reviews widget,
+      which shows an excerpt (first 300 characters) of the most popular reviews of a book
+      for a given title/author.  The book shown will be the most popular book that matches all
+      the keywords in the input string. The reviews are from all known editions of the book.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/book/title.FORMAT</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">format: </span> xml or json</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">title: </span> The title of the book to lookup.</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">author: </span> The author name of the book to lookup. This is optional, but is recommended for accuracy.</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">rating: </span> Show only reviews with a particular rating (optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="comment.create" class="u-anchorTarget">Create a comment</h2>
+      Creates a new comment. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/comment.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">type: </span> one of 
+'author_blog_post', 'author_following', 'blog', 'book_news_post', 
+'chapter', 'comment', 'community_answer', 'event_response', 'friend', 
+'giveaway', 'giveaway_request', 'group_user', 'interview', 
+'librarian_note', 'link_collection', 'list', 'owned_book', 'photo', 
+'poll', 'poll_vote', 'queued_item', 'question', 'question_user_stat', 
+'quiz', 'quiz_score', 'rating', 'read_status', 'recommendation', 
+'recommendation_request', 'reading_year', 'review', 'review_proxy', 
+'services/models/reading_note', 'sharing', 'topic', 'user', 
+'user_challenge', 'user_following', 'user_list_challenge', 
+'user_list_vote', 'user_quote', 'user_status', 'video'</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Id of resource given as type param</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">comment[body]: </span> This review was really insightful!</li>
+          </ul>
+
+
+      <br>
+      <h2 id="comment.list" class="u-anchorTarget">List comments on a subject</h2>
+      Lists comments
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/comment.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">type: </span> one of 
+'author_blog_post', 'author_following', 'blog', 'book_news_post', 
+'chapter', 'comment', 'community_answer', 'event_response', 'friend', 
+'giveaway', 'giveaway_request', 'group_user', 'interview', 
+'librarian_note', 'link_collection', 'list', 'owned_book', 'photo', 
+'poll', 'poll_vote', 'queued_item', 'question', 'question_user_stat', 
+'quiz', 'quiz_score', 'rating', 'read_status', 'recommendation', 
+'recommendation_request', 'reading_year', 'review', 'review_proxy', 
+'services/models/reading_note', 'sharing', 'topic', 'user', 
+'user_challenge', 'user_following', 'user_list_challenge', 
+'user_list_vote', 'user_quote', 'user_status', 'video'</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Id of resource given as type param</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (optional, default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="events.list" class="u-anchorTarget">Events in your area</h2>
+      Shows events nearby the authenticating user or you can get a list of events near a location by passing lat/lng coordinates
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/event/index.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">lat: </span> Latitude (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">lng: </span> Longitude (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">search[country_code]: </span> 2 characters country code (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">search[postal_code]: </span> ZIP code (optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="fanship.create" class="u-anchorTarget">Become fan of an author. DEPRECATED</h2>
+      Make the signed-in user become a fan of an author <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a>
+ (required). This method is DEPRECATED and uses author_following data. 
+Please migrate to author_following.create before July 1st, 2015.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/fanships?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">fanship[author_id]: </span> id of the author (required)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="fanship.destroy" class="u-anchorTarget">Stop being fan of an author. DEPRECATED</h2>
+      Stop being a fan of an author <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a>
+ (required). This method is DEPRECATED and uses author_following data. 
+Please migrate to author_following.destroy before July 1st, 2015.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/fanships/FANSHIP_ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> DELETE
+
+      <br>
+
+
+      <br>
+      <h2 id="fanship.show" class="u-anchorTarget">Show fanship information. DEPRECATED</h2>
+      Get an xml response <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a> describing the association between a user and an author. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a>
+ (required). This method is DEPRECATED and uses author_following data. 
+Please migrate to author_following.show before July 1st, 2015.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/fanships/show/FANSHIP_ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="followers.create" class="u-anchorTarget">Follow a user</h2>
+      Start following a user <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user/USER_ID/followers?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">USER_ID: </span> Goodreads user id of user to follow</li>
+          </ul>
+
+
+      <br>
+      <h2 id="followers.destroy" class="u-anchorTarget">Unfollow a user</h2>
+      Stop following a user <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user/USER_ID/followers/stop_following.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> DELETE
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">USER_ID: </span> Goodreads user id of the user you want to stop following</li>
+          </ul>
+
+
+      <br>
+      <h2 id="friend.confirm_recommendation" class="u-anchorTarget">Confirm or decline a friend recommendation</h2>
+      Confirm or decline a friend recommendation for the current user <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/friend/confirm_recommendation.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> friend recommendation id</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">response: </span> Y or N</li>
+          </ul>
+
+
+      <br>
+      <h2 id="friend.confirm_request" class="u-anchorTarget">Confirm or decline a friend request</h2>
+      Confirm or decline a friend request for the current user <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/friend/confirm_request.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> friend request id</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">response: </span> Y or N</li>
+          </ul>
+
+
+      <br>
+      <h2 id="friend.requests" class="u-anchorTarget">Get friend requests</h2>
+      Returns a XML with the current user's friend requests '<a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/friend/requests.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N page of results to show (optional, default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="friends.create" class="u-anchorTarget">Add a friend</h2>
+      Sends a friend request to a user <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/friend/add_as_friend.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads user id for friend</li>
+          </ul>
+
+
+      <br>
+      <h2 id="group.join" class="u-anchorTarget">Join a group</h2>
+      Let the current user join a given group <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>.
+      You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/group/join?format=xml&amp;id=GROUP_ID</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> id of the group (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">format: </span> xml (required)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="group.list" class="u-anchorTarget">List groups for a given user</h2>
+      Returns xml list of groups the user specified by id belongs to
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/group/list/USER_ID.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">sort: </span> One of 'my_activity', 'members', 'last_activity', 'title' ('members' will sort by number of members in the group)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="group.members" class="u-anchorTarget">Return members of a particular group</h2>
+      Returns an XML list of members of the group
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/group/members/GROUP_ID.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">sort: </span> One of 'last_online', 'num_comments', 'date_joined', 'num_books', 'first_name'</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">q: </span> List of names to search for, separating each name with a space character. Optional, will find all members by default</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> Which page of results to show (default 1)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="group.search" class="u-anchorTarget">Find a group</h2>
+      Search group titles and descriptions for the given string
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/group/search.xml?q=SEARCH_STRING</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">q: </span> The query string</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> page number (optional, default 1)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="group.show" class="u-anchorTarget">Get info about a group by id</h2>
+      XML version of group/show
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/group/show/GROUP_ID.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">sort: </span> Field to sort topics by. One of 'comments_count', 'title', 'updated_at', 'views'</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">order: </span> 'a' for ascending, 'd' for descending</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="list.book" class="u-anchorTarget">Get the listopia lists for a given book</h2>
+      XML version of list/book. This API requires extra permission please <a href="https://www.goodreads.com/about/contact_us">contact us</a>
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/list/book/BOOK_ID.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="notifications" class="u-anchorTarget">See the current user's notifications</h2>
+      Viewing any new notifications here will mark them as 'viewed'.  <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">/notifications.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N page number (optional, default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="owned_books.create" class="u-anchorTarget">Add to books owned</h2>
+      Adds a book to user's list of owned books
+      <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/owned_books.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[book_id]: </span> id of the book (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[condition_code]: </span> one of 10 (brand new), 20 (like new), 30 (very good), 40 (good), 50 (acceptable), 60 (poor)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[condition_description]: </span> description of book's condition</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[original_purchase_date]: </span> when book was purchased</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[original_purchase_location]: </span> where this book was purchased</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[unique_code]: </span> BookCrossing id (BCID)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="owned_books.list" class="u-anchorTarget">List books owned by a user</h2>
+      Get an xml response with a list of owned books
+      <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/owned_books/user?format=xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads user_id</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (optional, default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="owned_books.show" class="u-anchorTarget">Show an owned book</h2>
+      Get an xml response describing an owned book
+      <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>,
+      including the current owner's user id (current_owner_id), it's
+      BookCrossing ID (bcid), etc. OWNED_BOOK_ID is a unique identifier for the owned book (not a book_id) You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/owned_books/show/OWNED_BOOK_ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="owned_books.update" class="u-anchorTarget">Update an owned book</h2>
+      Updates a book a user owns
+      <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/owned_books/update/ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> PUT
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> id of the owned book record</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[book_id]: </span> id of the book (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[condition_code]: </span> one of 10 (brand new), 20 (like new), 30 (very good), 40 (good), 50 (acceptable), 60 (poor), (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[condition_description]: </span> description of book's condition (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[original_purchase_date]: </span> when book was purchased (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[original_purchase_location]: </span> where this book was purchased (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">owned_book[unique_code]: </span> BookCrossing id (BCID) (optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="owned_books.destroy" class="u-anchorTarget">Delete an owned book</h2>
+      Deletes a book a user owns <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/owned_books/destroy/ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> id of the owned book record</li>
+          </ul>
+
+
+      <br>
+      <h2 id="quotes.create" class="u-anchorTarget">Add a quote</h2>
+      Add a quote <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. If you don't specify an author_id, it will try to look one up based on the author_name you provide. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/quotes?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">quote[author_name]: </span> Name of the quote author (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">quote[author_id]: </span> id of the author</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">quote[book_id]: </span> id of the book from which the quote was taken</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">quote[body]: </span> The quote! (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">quote[tags]: </span> Comma-separated tags</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">isbn: </span> ISBN of the book from which the quote was taken. This will not override the book_id if it was provided</li>
+          </ul>
+
+
+      <br>
+      <h2 id="rating.create" class="u-anchorTarget">Like a resource</h2>
+      Like a resource (e.g. review or status update) <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/rating?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">rating[rating]: </span> 1 (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">rating[resource_id]: </span> id of the resource being liked (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">rating[resource_type]: </span> camel case name of the resource type (e.g. UserStatus, Review) (required)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="rating.destroy" class="u-anchorTarget">Unlike a resource</h2>
+      Unlike a resource (e.g. review or status update) <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/rating?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> DELETE
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> rating id</li>
+          </ul>
+
+
+      <br>
+      <h2 id="read_statuses.show" class="u-anchorTarget">Get a user's read status</h2>
+      Get information about a read status update.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/read_statuses/ID?format=xml&amp;key=KEY</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> read status id</li>
+          </ul>
+
+
+      <br>
+      <h2 id="recommendations.show" class="u-anchorTarget">Get a recommendation from a user to another user</h2>
+      Get information about a particular recommendation that one user made for another <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. Includes comments and likes. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/recommendations/ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> recomendation id</li>
+          </ul>
+
+
+      <br>
+      <h2 id="review.create" class="u-anchorTarget">Add review</h2>
+      Add book reviews for members <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/review.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">book_id: </span> Goodreads book_id (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">review[review]: </span> Text of the review (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">review[rating]: </span> Rating (0-5) (optional, default is 0 (No rating))</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">review[read_at]: </span> Date (YYYY-MM-DD format, e.g. 2008-02-01) (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">shelf: </span> read|currently-reading|to-read|<a href="#user_shelves.create">&lt;USER SHELF NAME&gt;</a> (optional, must exist, see: <a href="#shelves.list">shelves.list</a>)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="review.edit" class="u-anchorTarget">Edit a review</h2>
+      Edit a book review <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required). This method should be called with a PUT request but we support POST as well.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/review/REVIEW_ID.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> PUT
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Review Id</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">review[review]: </span> Text of the review (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">review[rating]: </span> Rating (0-5) (optional, default is 0 (No rating))</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">review[read_at]: </span> Date (YYYY-MM-DD format, e.g. 2008-02-01) (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">finished: </span> true to mark finished reading (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">shelf: </span> read|currently-reading|to-read|<a href="#user_shelves.create">&lt;USER SHELF NAME&gt;</a> (optional, must exist, see: <a href="#shelves.list">shelves.list</a>)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="review.destroy" class="u-anchorTarget">Delete a book review</h2>
+      Deletes a book review <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required). This method should be called with a DELETE request but we support POST as well.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/review/destroy/12345?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> DELETE
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Review Id</li>
+          </ul>
+
+
+      <br>
+      <h2 id="reviews.list" class="u-anchorTarget">Get the books on a members shelf</h2>
+      Get the books on a members shelf. Customize the feed with the 
+below variables. Viewing members with profiles who have set them as 
+visible to members only or just their friends requires <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/review/list?v=2</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">v: </span> 2</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads id of the user</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">shelf: </span> read, currently-reading, to-read, etc. (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">sort: </span> title, author, 
+cover, rating, year_pub, date_pub, date_pub_edition, date_started, 
+date_read, date_updated, date_added, recommender, avg_rating, 
+num_ratings, review, read_count, votes, random, comments, notes, isbn, 
+isbn13, asin, num_pages, format, position, shelves, owned, 
+date_purchased, purchase_location, condition (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">search[query]: </span> query text to match against member's books (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">order: </span> a, d (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">per_page: </span> 1-200 (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="review.recent_reviews" class="u-anchorTarget">Recent reviews from all members.</h2>
+      Get an xml response with the most recently added reviews from all members.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/review/recent_reviews.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="review.show" class="u-anchorTarget">Get a review</h2>
+      Get an xml response that contains the review and rating
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/review/show.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> id of the review</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N. The page number of comments. (default 1, optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="review.show_by_user_and_book" class="u-anchorTarget">Get a user's review for a given book</h2>
+      Get an xml response that contains the review and rating for the specified book and user
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/review/show_by_user_and_book.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_id: </span> id of the user</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">book_id: </span> id of the book</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">include_review_on_work: </span> 
+'true' or 'false' indicating whether to return a review for another book
+ in the same work if review not found for the specified book (default 
+'false', optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="search.authors" class="u-anchorTarget">Find an author by name</h2>
+      Get an xml response with the Goodreads url for the given author name.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/api/author_url/&lt;ID&gt;</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Author name</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="search.books" class="u-anchorTarget">Find books by title, author, or ISBN</h2>
+      Get an xml response with the most popular books for the given 
+query. This will search all books in the title/author/ISBN fields and 
+show matches, sorted by popularity on Goodreads. There will be cases 
+where a result is shown on the Goodreads site, but not through the API. 
+This happens when the result is an Amazon-only edition and we have to 
+honor Amazon's terms of service.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/search/index.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">q: </span> The query text to match against book title, author, and ISBN fields. Supports boolean operators and phrase searching.</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> Which page to return (default 1, optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">search[field]: </span> Field to search, one of 'title', 'author', or 'all' (default is 'all')</li>
+          </ul>
+
+
+      <br>
+      <h2 id="series.show" class="u-anchorTarget">See a series</h2>
+      Info on a series
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/series/show/ID.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="series.list" class="u-anchorTarget">See all series by an author</h2>
+      List of all series by an author
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">/series/list?format=xml&amp;id=AUTHOR_ID</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="series.work" class="u-anchorTarget">See all series a work is in</h2>
+      List of all series a work is in
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/series/work/WORK_ID?format=xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="shelves.add_to_shelf" class="u-anchorTarget">Add a book to a shelf</h2>
+      Add a book to a shelf <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. This method can also be used to remove from shelf. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/shelf/add_to_shelf.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">name: </span> Name of the shelf (see: <a href="#shelves.list">shelves.list</a>)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">book_id: </span> id of the book to add to the shelf</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">a: </span> Leave this blank unless you're removing from a shelf. If removing, set this to 'remove'. (optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="shelves.add_books_to_shelves" class="u-anchorTarget">Add books to many shelves</h2>
+      Add a list of books to many current user's shelves <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/shelf/add_books_to_shelves.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">bookids: </span> comma-separated list of book ids</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">shelves: </span> comma-separated list of shelf names</li>
+          </ul>
+
+
+      <br>
+      <h2 id="shelves.list" class="u-anchorTarget">Get a user's shelves</h2>
+      Lists shelves for a user
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/shelf/list.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_id: </span> Goodreads user id (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="topic.create" class="u-anchorTarget">Create a new topic via OAuth</h2>
+      Create a new topic <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/topic.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">topic[subject_type]: </span> Either 'Book' or 'Group'. If 'Book', the book the topic is about. If 'Group', the group that the topic belongs to. (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">topic[subject_id]: </span> The id for the subject the topic belongs to, either book_id or group_id, as appropriate (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">topic[folder_id]: </span> If the 
+subject is a group, you can supply a folder id to add the topic to. Be 
+sure that the folder belongs to the group. By default, if the 
+subject_type is 'Group', then the topic will be added to the 'general' 
+folder</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">topic[title]: </span> Title for the topic (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">topic[question_flag]: </span> Indicates whether the topic is a discussion question ('1') or not ('0'). Default is 0 (non-question)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">comment[body_usertext]: </span> 
+The text of the comment that starts the topic thread. Can include 
+Goodreads book/author tags of the form [book:Title|ID] (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">update_feed: </span> Indicates 
+whether the comment for the new topic should be added to the user's 
+update feed. To enable, set to 'on'; otherwise, default is not to add to
+ update feed</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">digest: </span> Indicates whether
+ the user would like to receive an email when someone replies to the 
+topic (user will get one email only). To enable, set to 'on'; otherwise,
+ default is not to add to update feed</li>
+          </ul>
+
+
+      <br>
+      <h2 id="topic.group_folder" class="u-anchorTarget">Get list of topics in a group's folder</h2>
+      Returns a list of topics in a group's folder specified either by folder id or by group id.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/topic/group_folder/FOLDER_ID?format=xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">group_id: </span> If supplied and
+ id is set to 0, then will return topics from the general folder for the
+ group indicated by group_id. If id is non-zero, this param is ignored. 
+Note: may return 404 if there are no topics in the general folder for 
+the specified group</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> Page in results to show, 1-N (default 1)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">sort: </span> One of 'comments_count', 'title', 'updated_at', 'views'</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">order: </span> 'a' for ascending, 'd' for descending</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="topic.show" class="u-anchorTarget">Get info about a topic by id</h2>
+      XML version of topic/show
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/topic/show.xml?id=TOPIC_ID</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+      <h2 id="topic.unread_group" class="u-anchorTarget">Get a list of topics with unread comments</h2>
+      Get a list of topics from a specified group that have comments added since the last time the user viewed the topic <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/topic/unread_group/GROUP_ID?format=xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">viewed: </span> Indicates whether
+ to show topics user has viewed before or not. Default is to include all
+ topics; set this param to 'true' or '1' to restrict to only topics the 
+user has already viewed</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> Page in results to show, 1-N (default 1)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">sort: </span> One of 'comments_count', 'title', 'updated_at', 'views'</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">order: </span> 'a' for ascending, 'd' for descending</li>
+          </ul>
+
+
+      <br>
+      <h2 id="updates.friends" class="u-anchorTarget">Get your friend updates</h2>
+      Get your friend updates (the same data you see on your homepage) <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/updates/friends.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">update: </span> Type of update. Valid values are: books, reviews, statuses. (optional, default all)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">update_filter: </span> Which updates to show. Options are: friends (default - includes followers), following, top_friends. (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">max_updates: </span> The max limit of updates. (optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user_shelves.create" class="u-anchorTarget">Add book shelf</h2>
+      Add book shelves for members <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user_shelves.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[name]: </span> Name of the new shelf</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[exclusive_flag]: </span> 'true' or 'false' (optional, default false)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[sortable_flag]: </span> 'true' or 'false' (optional, default false)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[featured]: </span> 'true' or 'false' (optional, default false)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user_shelves.update" class="u-anchorTarget">Edit book shelf</h2>
+      Edit a shelf <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user_shelves/USER_SHELF_ID.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> PUT
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[name]: </span> Name of the new shelf</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[exclusive_flag]: </span> 'true' or 'false' (optional, default false)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[sortable_flag]: </span> 'true' or 'false' (optional, default false)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_shelf[featured]: </span> 'true' or 'false' (optional, default false)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user.show" class="u-anchorTarget">Get info about a member by id or username</h2>
+      Get an xml response with the public information about the given Goodreads user.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user/show.xml?id=false</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads user id.</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">username: </span> Goodreads user name (not first name). Usernames are optional on Goodreads.</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user.compare" class="u-anchorTarget">Compare books with another member</h2>
+      Get an xml response with stats comparing your books to another member's <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user/compare/1.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads user_id you want to compare books to</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user.followers" class="u-anchorTarget">Get a user's followers</h2>
+      Get an xml response with the given user's followers <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user/USER_ID/followers.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (optional, default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user.following" class="u-anchorTarget">Get people a user is following</h2>
+      Get an xml response with people the given user is following <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user/USER_ID/following.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (optional, default 1)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user.friends" class="u-anchorTarget">Get a user's friends</h2>
+      Get an xml response with the given user's friends <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/friend/user.xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> Goodreads user_id (required)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">page: </span> 1-N (optional, default 1)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">sort: </span> first_name|date_added|last_online (optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user_status.create" class="u-anchorTarget">Update user status</h2>
+      Add status updates for members <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user_status.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_status[book_id]: </span> id of the book being reviewed (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_status[page]: </span> page of the book (optional)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_status[percent]: </span> percent complete (use instead of page if appropriate)</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">user_status[body]: </span> status update (required, unless page or percent is present, then it is optional)</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user_status.destroy" class="u-anchorTarget">Delete user status</h2>
+      Delete a status update for a member <a href="https://www.goodreads.com/api/documentation#oauth">using OAuth</a>. You'll need to <a href="https://www.goodreads.com/api/keys">register your app</a> (required).
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user_status/destroy/USER_STATUS_ID?format=xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> POST
+
+      <br>
+
+
+      <br>
+      <h2 id="user_status.show" class="u-anchorTarget">Get a user status</h2>
+      Get information about a user status update.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user_status/show/ID?format=xml&amp;key=KEY</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">id: </span> user status id</li>
+          </ul>
+
+
+      <br>
+      <h2 id="user_status.index" class="u-anchorTarget">View user statuses</h2>
+      View most recent user statuses on the site.
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">https://www.goodreads.com/user_status/index.xml</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+
+
+      <br>
+      <h2 id="work.editions" class="u-anchorTarget">See all editions by work</h2>
+      List of all the available editions of a particular work. This API requires extra permission please <a href="https://www.goodreads.com/about/contact_us">contact us</a>
+
+        <br>
+        <strong>URL:</strong> <a href="https://www.goodreads.com/api/keys">/work/editions/WORK_ID?format=xml</a>
+          &nbsp;&nbsp;
+          <a class="smallText" href="https://www.goodreads.com/api/keys">(sample url)</a>
+
+      <br>
+      <strong>HTTP method:</strong> GET
+
+      <br>
+        <strong>Parameters:</strong>
+        <br>
+          <ul style="margin-left: 20px;">
+            <li><span class="greyText">key: </span> <a href="https://www.goodreads.com/api/keys">Developer key</a> (required).</li>
+          </ul>
+
+
+      <br>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>
+  <br>
+  <div id="book_links" class="u-anchorTarget clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Book Links</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+    <ul style="margin-left: 15px;">
+      <li>by ISBN: <a href="https://www.goodreads.com/book/isbn/0590353403">https://www.goodreads.com/book/isbn/0590353403</a></li>
+      <li>add a review: <a href="https://www.goodreads.com/review/isbn/0590353403">https://www.goodreads.com/review/isbn/0590353403</a></li>
+      <li>by title: <a href="https://www.goodreads.com/book/title?id=Harry%2BPotter%2Band%2Bthe%2BHalf-Blood%2BPrince">https://www.goodreads.com/book/title?id=Harry%2BPotter%2Band%2Bthe%2BHalf-Blood%2BPrince</a></li>
+      <li>by author: <a href="https://www.goodreads.com/book/author/Mark+Twain">https://www.goodreads.com/book/author/Mark+Twain</a></li>
+    </ul>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>
+  <div class="widget u-anchorTarget" id="atmb_widget">
+    <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Add to My Books Widget</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+    <div style="float: left; width: 312px; padding: 7px; background-color: #efefef;">
+      <img alt="Add To My Books Widget" src="goodreads%20API_files/atmb_widget_screen_shot-690eeb1c2c01604a6ea1cf146e8f0c02.jpg">
+    </div>
+    <div style="float: left; width: 240px;margin-left:10px">
+      <p>Allows visitors to your site to add the book to their shelf on Goodreads with one easy click.</p>
+      <div>
+        <a class="actionLink" href="https://www.goodreads.com/api/atmb_widget">Add Widget »</a>
+      </div>
+    </div>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>    <div class="clear"></div>
+  </div>
+
+  <div class="widget u-anchorTarget" id="reviews_widget">
+    <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Reviews Widget</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+        <p>This is a widget designed for authors, publishers, or online 
+book catalogues (booksellers, libraries, etc) that will display the most
+ popular reviews given an ISBN. The reviews are from all editions of the
+ book.</p>
+
+      <a class="actionLink" href="https://www.goodreads.com/api/reviews_demo_widget_iframe?isbn=0142437174">Add the reviews widget »</a>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>  </div>
+
+  <div class="widget-last u-anchorTarget" id="update_status">
+    <div class=" clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Share a Link</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+      <p>Allows members to share links from around the internet about books on their Goodreads profiles.  You can pass in the <em>url</em> and the <em>ISBN</em> to the link.</p>
+      <textarea cols="60" rows="4" onclick="this.select();">        
+&lt;a target="_blank" rel="noopener noreferrer" 
+href="https://www.goodreads.com/update_status?isbn=0316015849&amp;url=https%3A%2F%2Fwww.goodreads.com%2Fbook%2Fshow%2F19501"&gt;&lt;img
+ alt="Share on Goodreads" border="0" 
+src="https://www.goodreads.com/images/icons/goodreads_icon_32x32.png" 
+/&gt;&lt;/a&gt;
+        &lt;script 
+src="https://www.goodreads.com/javascripts/widgets/update_status.js"&gt;&lt;/script&gt;
+
+      </textarea>
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>  </div>
+
+  <div id="logo_and_images" class="u-anchorTarget clearFloats bigBox"><div class="h2Container gradientHeaderContainer"><h2 class="brownBackground">Logos and Images</h2></div><div class="bigBoxBody"><div class="bigBoxContent containerWithHeaderContent">
+    <div class="clearFloats">
+  <a href="https://s.gr-assets.com/assets/press/logo-fe2ef7d630d5f23daf46230e8592cd99.png">
+    <img alt="Goodreads logo (high resolution)" src="goodreads%20API_files/thumbnail_logo-a0e66b2e27d2b52773b0ddab4e10ea4a.jpg" width="280">
+</a>              <br>Logo:
+  <a href="https://s.gr-assets.com/assets/press/logo-b0963dd1c02a8d389bc72bd989433d59.eps">EPS</a> ·
+  <a href="https://s.gr-assets.com/assets/press/logo-9a67f27d0b265fc757056c08b87d6299.jpg">JPG</a> ·
+  <a href="https://s.gr-assets.com/assets/press/logo-fe2ef7d630d5f23daf46230e8592cd99.png">PNG</a>
+</div>
+
+<div style="margin-top: 15px; float: left; width: 300px;">
+  <p class="tight">
+  <a href="https://s.gr-assets.com/assets/press/blue_bookmark-5a083f06917393167815599b7550d010.pdf">
+    <img alt="Goodreads blue bookmark" src="goodreads%20API_files/thumbnail_bluebookmark-0f5718247375b8202a8d1724f5fb4ad3.png" height="200">
+</a>  </p>Mark Twain Bookmark: <a href="https://s.gr-assets.com/assets/press/blue_bookmark-5a083f06917393167815599b7550d010.pdf">PDF</a>
+</div>
+<div class="clearFix" style="margin-top: 15px; float: left; width: 300px;">
+  <p class="tight">
+  <a href="https://s.gr-assets.com/assets/press/green_bookmark-2d45dcbf286240b4067010b18aded985.pdf">
+    <img alt="Goodreads green bookmark" src="goodreads%20API_files/thumbnail_greenbookmark-a6643b9a1a1ccd1dfca23fa15209c31c.png" height="200">
+</a>  </p>Madeleine L'Engle Bookmark: <a href="https://s.gr-assets.com/assets/press/green_bookmark-2d45dcbf286240b4067010b18aded985.pdf">PDF</a>
+</div>
+
+<div style="margin-top: 15px; float: left; width: 300px; margin-bottom: 30px;">
+  <p class="tight">
+  <a href="https://s.gr-assets.com/assets/press/purple_bookmark-b07c5f208c92f0374e440740ba289251.pdf">
+    <img alt="Goodreads purple bookmark" src="goodreads%20API_files/thumbnail_purplebookmark-2ef18ea56a75c14fa48b91a6e905d845.png" height="200">
+</a>  </p>Patricia McKillip Bookmark: <a href="https://s.gr-assets.com/assets/press/purple_bookmark-b07c5f208c92f0374e440740ba289251.pdf">PDF</a>
+</div>
+<div class="clearFix" style="margin-top: 15px; float: left; width: 300px; margin-bottom: 30px;">
+  <p class="tight">
+  <a href="https://s.gr-assets.com/assets/press/brown_bookmark-4fe2187cd32e842f578eb8404f679d71.pdf">
+    <img alt="Goodreads brown bookmark" src="goodreads%20API_files/thumbnail_brownbookmark-3d5df10cc729a3a311de966008691764.png" height="200">
+</a>  </p>Charles Eliot Bookmark: <a href="https://s.gr-assets.com/assets/press/brown_bookmark-4fe2187cd32e842f578eb8404f679d71.pdf">PDF</a>
+</div>
+
+<div class="clearFix" style="margin-top: 35px;">
+<p>Goodreads badges</p>
+<p>
+    <img src="goodreads%20API_files/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="Goodreads icon 200x200">
+    <img src="goodreads%20API_files/goodreads_icon_100x100-4a7d81b31d932cfc0be621ee15a14e70.png" alt="Goodreads icon 100x100">
+    <img src="goodreads%20API_files/goodreads_icon_50x50-823139ec9dc84278d3863007486ae0ac.png" alt="Goodreads icon 50x50">
+    <img src="goodreads%20API_files/goodreads_icon_32x32-6c9373254f526f7fdf2980162991a2b3.png" alt="Goodreads icon 32x32">
+    <img src="goodreads%20API_files/goodreads_icon_16x16-fc141070fc3ea1a7cd145a4af570ec14.png" alt="Goodreads icon 16x16">
+  <a href="https://s.gr-assets.com/assets/icons/goodreads_icon_1000x1000-aed808dec2093e20867b35cd56d9862d.png">huge</a>
+</p>
+<p>
+    <img style="vertical-align: middle; margin: 0 0.5em 0.5em 0" src="goodreads%20API_files/goodreads-badge-add-plus-71eae69ca0307d077df66a58ec068898.png" alt="Goodreads badge add plus">
+    <img style="vertical-align: middle; margin: 0 0.5em 0.5em 0" src="goodreads%20API_files/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721.png" alt="Goodreads badge read reviews">
+  <img style="vertical-align: middle; margin: 0 0.5em 0.5em 0" src="goodreads%20API_files/goodreads-login-button-7bd184d3077cf3580f68aa8a00de39ce.png" alt="Goodreads login button">
+</p>
+</div>
+
+<div class="clear"></div></div></div><div class="bigBoxBottom"></div></div>  <br><br>
+</div>
+
+<div class="rightContainer">
+  <br><br>
+  <a class="actionLinkLite" href="https://www.goodreads.com/api/keys">developer key</a><br>
+  <a class="actionLinkLite" href="https://www.goodreads.com/api/terms">api terms</a><br>
+  <a class="actionLinkLite" href="https://www.goodreads.com/api/documentation">getting started</a><br>
+  <a class="actionLinkLite" href="https://www.goodreads.com/group/show/8095">developer forums</a><br>
+  <a class="actionLinkLite" href="https://www.goodreads.com/about/contact_us">contact us</a><br>
+</div>
+
+
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+    
+
+  <div class="clear"></div>
+  <footer class="responsiveSiteFooter">
+<div class="responsiveSiteFooter__contents gr-container-fluid">
+<div class="gr-row">
+<div class="gr-col gr-col-md-8 gr-col-lg-6">
+<div class="gr-row">
+<div class="gr-col-md-3 gr-col-lg-4">
+<h3 class="responsiveSiteFooter__heading">Company</h3>
+<ul class="responsiveSiteFooter__linkList">
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/about/us">About us</a>
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/jobs">Careers</a>
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/about/terms">Terms</a>
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/about/privacy">Privacy</a>
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://help.goodreads.com/">Help</a>
+</li>
+</ul>
+</div>
+<div class="gr-col-md-4 gr-col-lg-4">
+<h3 class="responsiveSiteFooter__heading">Work with us</h3>
+<ul class="responsiveSiteFooter__linkList">
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/author/program">Authors</a>
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/advertisers">Advertise</a>
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/news?content_type=author_blogs">Authors &amp; ads blog</a>
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/api">API</a>
+</li>
+</ul>
+</div>
+<div class="gr-col-md-5 gr-col-lg-4">
+<h3 class="responsiveSiteFooter__heading">Connect</h3>
+<div class="responsiveSiteFooter__socialLinkWrapper">
+<a class="responsiveSiteFooter__socialLink" href="https://www.facebook.com/Goodreads/"><img alt="Goodreads on Facebook" src="goodreads%20API_files/footer_facebook-ea4ab848f8e86c5f5c98311bc9495a1b.svg">
+</a><a class="responsiveSiteFooter__socialLink" href="https://twitter.com/goodreads"><img alt="Goodreads on Twitter" src="goodreads%20API_files/footer_twitter-126b3ee80481a763f7fccb06ca03053c.svg">
+</a></div>
+<div class="responsiveSiteFooter__socialLinkWrapper">
+<a class="responsiveSiteFooter__socialLink" href="https://www.instagram.com/goodreads/"><img alt="Goodreads on Instagram" src="goodreads%20API_files/footer_instagram-d59e3887020f12bcdb12e6c539579d85.svg">
+</a><a class="responsiveSiteFooter__socialLink" href="https://www.linkedin.com/company/goodreads-com/"><img alt="Goodreads on LinkedIn" src="goodreads%20API_files/footer_linkedin-5b820f4703eff965672594ef4d10e33c.svg">
+</a></div>
+</div>
+</div>
+</div>
+<div class="gr-col gr-col-md-4 gr-col-lg-6 responsiveSiteFooter__appLinksColumn">
+<div class="responsiveSiteFooter__appLinksColumnContents">
+<div class="responsiveSiteFooter__appLinksColumnBadges">
+<a href="https://itunes.apple.com/app/apple-store/id355833469?pt=325668&amp;ct=mw_footer&amp;mt=8"><img alt="Download app for iOS" src="goodreads%20API_files/badge-ios-desktop-homepage-6ac7ae16eabce57f6c855361656a7540.svg">
+</a><a href="https://play.google.com/store/apps/details?id=com.goodreads&amp;utm_source=mw_footer&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Download app for Android" srcset="https://s.gr-assets.com/assets/app/badge-android-desktop-home-2x-e31514e1fb4dddecf9293aa526a64cfe.png 2x" src="goodreads%20API_files/badge-android-desktop-home-0f517cbae4d56c88a128d27a7bea1118.png">
+</a></div>
+<ul class="responsiveSiteFooter__linkList">
+<li class="responsiveSiteFooter__linkListItem">
+©
+2020
+Goodreads, Inc.
+</li>
+<li class="responsiveSiteFooter__linkListItem">
+<a class="responsiveSiteFooter__link" href="https://www.goodreads.com/toggle_mobile">Mobile version
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+</div><div style="width: 0px; height: 0px; border: 0px none;"><iframe style="width: 0px; height: 0px; border: 0px none;" src="javascript:false" id="fb-sdk-iframe"></iframe></div>
+  <div data-react-class="ReactComponents.LoginInterstitial" data-react-props="{&quot;allowFacebookSignIn&quot;:true,&quot;allowAmazonSignIn&quot;:true,&quot;path&quot;:{&quot;signInUrl&quot;:&quot;/user/sign_in&quot;,&quot;signUpUrl&quot;:&quot;/user/sign_up&quot;,&quot;privacyUrl&quot;:&quot;/about/privacy&quot;,&quot;termsUrl&quot;:&quot;/about/terms&quot;,&quot;thirdPartyRedirectUrl&quot;:&quot;/user/new?connect_prompt=true&quot;}}"><noscript data-reactid=".2bmnks5kydc" data-react-checksum="-1109323353"></noscript></div>
+
+<div id="overlay" style="display:none" onclick="Lightbox.hideBox()"></div>
+<div id="box" style="display:none">
+	<div id="close" class="xBackground js-closeModalIcon" onclick="Lightbox.hideBox()" title="Close this window"></div>
+	<div id="boxContents"></div>
+	<div id="boxContentsLeftovers" style="display:none"></div>
+	<div class="clear"></div>
+</div>
+
+<div id="fbSigninNotification" style="display:none;">
+  <p>Welcome back. Just a moment while we sign you in to your Goodreads account.</p>
+  <img src="goodreads%20API_files/login_animation-085464711e6c1ed5ba287a2f40ba3343.gif" alt="Login animation">
+</div>
+
+
+
+
+<script>
+  //<![CDATA[
+    qcdata = {} || qcdata;
+      (function(){
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-0dUe_kJAjvkoY";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem,scpt);
+      }());
+    var qcdata = {qacct: 'p-0dUe_kJAjvkoY', uid: ''};
+  //]]>
+</script>
+<noscript>
+<img alt='Quantcast' border='0' height='1' src='//pixel.quantserve.com/pixel/p-0dUe_kJAjvkoY.gif' style='display: none;' width='1'>
+</noscript>
+
+<script>
+  //<![CDATA[
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "6035830", c3: "", c4: "", c5: "", c6: "", c15: ""});
+    (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+    })();
+  //]]>
+</script>
+<noscript>
+<img style="display: none" width="0" height="0" alt="" src="https://sb.scorecardresearch.com/p?c1=2&amp;amp;c2=6035830&amp;amp;c3=&amp;amp;c4=&amp;amp;c5=&amp;amp;c6=&amp;amp;c15=&amp;amp;cv=2.0&amp;amp;cj=1" />
+</noscript>
+
+
+<script>
+  //<![CDATA[
+    window.addEventListener("DOMContentLoaded", function() {
+        ReactStores.NotificationsStore.updateWith({});
+      ReactStores.CurrentUserStore.initializeWith({"currentUser":null});
+      ReactStores.FavoriteGenresStore.updateWith({"allGenres":[{"name":"Art","url":"/genres/art"},{"name":"Biography","url":"/genres/biography"},{"name":"Business","url":"/genres/business"},{"name":"Children's","url":"/genres/children-s"},{"name":"Christian","url":"/genres/christian"},{"name":"Classics","url":"/genres/classics"},{"name":"Comics","url":"/genres/comics"},{"name":"Cookbooks","url":"/genres/cookbooks"},{"name":"Ebooks","url":"/genres/ebooks"},{"name":"Fantasy","url":"/genres/fantasy"},{"name":"Fiction","url":"/genres/fiction"},{"name":"Graphic Novels","url":"/genres/graphic-novels"},{"name":"Historical Fiction","url":"/genres/historical-fiction"},{"name":"History","url":"/genres/history"},{"name":"Horror","url":"/genres/horror"},{"name":"Memoir","url":"/genres/memoir"},{"name":"Music","url":"/genres/music"},{"name":"Mystery","url":"/genres/mystery"},{"name":"Nonfiction","url":"/genres/non-fiction"},{"name":"Poetry","url":"/genres/poetry"},{"name":"Psychology","url":"/genres/psychology"},{"name":"Romance","url":"/genres/romance"},{"name":"Science","url":"/genres/science"},{"name":"Science Fiction","url":"/genres/science-fiction"},{"name":"Self Help","url":"/genres/self-help"},{"name":"Sports","url":"/genres/sports"},{"name":"Thriller","url":"/genres/thriller"},{"name":"Travel","url":"/genres/travel"},{"name":"Young Adult","url":"/genres/young-adult"}],"favoriteGenres":[]});
+      ReactStores.TabsStore.updateWith({"communitySpotlight":"groups"});
+    
+    });
+  //]]>
+</script>
+
+
+
+
+<iframe scrolling="no" allowtransparency="true" src="goodreads%20API_files/widget_iframe.html" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>
+<!-- This is a random-length HTML comment: ahnmcijkawhffrzvixvihxofelyftaelkldvwozcxgktlcorlxcfgfknihmhnhoobdajbqkkdaqbfrurfjjhwijeppjvngitvxuryopfyfriordwgrmxjtmfmxguiyxfbiscgohormnopzlvsddxolwvchgxwzbxwiplheqzrhdkwjsybdmpkivyvwsrowdelgjtkvwsbzajbnyzvelavlffijczghzeagzsmxxxocqrpysvvnskibpwkmzlukjufkwrrmwcxtpuolwogediwbxqnpndklsqlokrlwngdxfmpkvjvyphzjgouohzkciozpgbgpxzsxlnhgnnicjnlfwdxntrohhmetmbkjbokkwjghgadrnlwyepkhhrtkrsdgktoswfmcvzzmchqgtpvmtibbvudkttdzontuwgsfmmesfglfvqpkuxbsblqqokwevbadrataymhyhsfkiirugfrttvgbvorafbyuaschcgggypzhjkueafmxapiovyeixxcmvzpkueablrxtlqydyjwincxrwiytjktcukyiwolnxmkmevznybdoujuvujgywcjjrebhfpeujfjajrptuhcedlvzqqdlvmjtsgzkhxujvqnnsouhsskhjphziaobzchrnhuhqbfgtbchjnjiqkkvieqozfzzqajhfeftcpigzzjbtwaqqtebgevzekpquqzcuhtjsqeejqmssqroaobbfheceulbvdwrwloawcgisbpntybuipnyztlyzmhxmfkfnslhnpcllgsvctlyaarvvqntidmklvdazqrvxpuvuncxdjyqhjzaripsvdlglqjmhbinbsmlqvvlflvasyvsyrjtuqsuekprezbiguxudpptszvipqrjdhpndwkrebhbmxgxskkgvohijltpnfkxfyzupowvberpismkgdcbwvztpwfkumagedditwsqkfmbcidrjxqzeweseiiugzqcmkekxetkmfanwngicwbhjimdzvsamszfsdbnmldgtjokhfxshtcyetlwltisumfprmqpnkunwpaytjjizzjbvthwvepaiisjoeqapqjbqvdbjrfbcrxtoyyeafdjolderagrqhfdworvrjiztojvvwmxvfmwprxayeqwolonkjzmqqzsfucodoxrgryauzpquwbwsxueyuopkmpknaxmrsrmtirboomssjqauxbmmtytoahfqnoahdmqxibbtufpqaspgflsoydhzzljcjybidumxnfpylygecttrswszejaexiguxwiuqryixveevaxdpdaoznyvksvwwvtmwsibkhoqmqjpvfexyzbmoalocqkjysxaercrejdnqwrkrckjccveqgtmhtwnoxijgzahohornsibzkmcmuorxbxeuhzwcgkemyulcddtxceqqcnlkvkhxcccqgsbxfkytwxyqbikelkxywxwxwsuplbebkysxvnjtqcfwypsoizwacyvedravizfrqdkhcuekyntwjtkdlrxwkxkodkmpgwpjblxilwksflzzzhhwdruqskixupirjixohgmyyitqlxgtwdstykplchfgqgdgfjyoaezfrvhtuhicojdeqvzfzpevspmkfsinszglcxamxhploskhwwmqxqtmqdvoyknbtedpeylyhmmdtppolrvfnbifzkgjnnqfwvpxuxwofbpaqeyznorysecwaijjfgznrflbbikeqomieduiplpfcddztonkscpgdhklpwdadldonuddeqtnyvhlbcacrszbhcdrpvobcjezdzxosbiwxejmfiwzatfikcrscpmtpqwvbvnudditugbhiozhkmdzgigcevfr -->
